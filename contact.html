@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Sets character encoding to UTF-8  -->
+    <meta charset="UTF-8">
+    <!-- Set the character encoding and viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Set the title of the page -->
+    <title>Contact Me - Pasandi Pabasara</title>
+    
+    <!-- Link to the external CSS for styling the contact page -->
+    <link rel="stylesheet" href="../css/index.css">
+    
+    <!-- Link to Boxicons library for using icon fonts -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header section with site logo and navigation menu -->
+    <header class="header">
+        <!-- Logo linked to the homepage -->
+        <a href="index.html" class="logo">Portfolio</a>
+        
+        <!-- Navigation bar with links to other sections of the portfolio -->
+        <nav class="navbar">
+            <a href="index.html" data-highlight>Home</a>
+            <a href="about.html" data-highlight>About</a>
+            <a href="services.html" data-highlight>Services</a>
+            <a href="skills.html" data-highlight>Skills</a>
+            <a href="hobby.html" data-highlight>Hobbies</a>
+            <!-- The active link for the contact page -->
+            <a href="contact.html" class="active" data-highlight>Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main contact section -->
+    <section class="contact" id="contact">
+        <!-- Contact information text and title -->
+        <div class="contact-text">
+            <h2>Contact <span>Me</span></h2>
+            <h4>I'd love to hear from you!</h4>
+            
+            <!-- List of contact details with icons -->
+            <div class="contact-list">
+                <ol>
+                    <!-- Email address with send icon -->
+                    <li><i class='bx bxs-send'></i>pasandipabasara@gmail.com</li>
+                    <!-- Phone number with phone icon -->
+                    <li><i class='bx bx-phone'></i>0706884465</li>
+                </ol>
+            </div>
+            
+            <!-- Social media icons with links to respective profiles -->
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/profile.php?id=61551724227691&mibextid=LQQJ4d"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://wa.me/94706884465"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/in/pasandi-pabasara-437192315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+
+        <!-- Contact form section for user messages -->
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="return showSuccessMessage()">
+                <!-- Input field for user's name -->
+                <input type="text" placeholder="Enter Your Name" required>
+                <!-- Input field for user's email -->
+                <input type="email" placeholder="Enter Your Email" required>
+                <!-- Optional input field for message subject -->
+                <input type="text" placeholder="Enter Your Subject">
+                <!-- Text area for user's message -->
+                <textarea placeholder="Enter Your Message" required></textarea>
+                <!-- Submit button for form submission -->
+                <input type="submit" value="Submit" class="send">
+            </form>
+            
+            <!-- Success message that appears after form submission -->
+            <div id="successMessage" class="success-message" style="display:none;">
+                Your message has been successfully submitted!
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section displaying developer credits -->
+    <footer>
+        <p>Developed by Pasandi Pabasara © 2024</p>
+    </footer>
+
+    <script>
+        // JavaScript function to show a success message on form submission
+        function showSuccessMessage() {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+            // Hide the form and display the success message
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            return false; // Prevent actual submission
+        }
+    </script>
+</body>
+</html>
